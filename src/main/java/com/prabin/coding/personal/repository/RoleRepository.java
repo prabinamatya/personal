@@ -1,8 +1,9 @@
 package com.prabin.coding.personal.repository;
 
-import org.springframework.context.annotation.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface RoleRepository extends JpaRepository<Role, Integer>{
+import com.prabin.coding.personal.entity.Role;
+
+public interface RoleRepository extends JpaRepository<Role, Integer> {
 
 }
