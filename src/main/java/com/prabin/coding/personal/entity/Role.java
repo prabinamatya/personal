@@ -13,20 +13,21 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "role")
-public class Role implements Serializable{
-	
+public class Role implements Serializable {
+
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -2250716474012986827L;
 
 	@Id
+	@Column(name = "role_id")
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Integer id;
+	private Integer roleId;
 
 	@Column(name = "username", nullable = false)
 	private String name;
-	
+
 	@ManyToMany(mappedBy = "roles")
 	private List<User> users;
 
@@ -45,6 +46,5 @@ public class Role implements Serializable{
 	public void setUsers(List<User> users) {
 		this.users = users;
 	}
-	
-	
+
 }
