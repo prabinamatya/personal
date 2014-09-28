@@ -24,7 +24,7 @@ import org.springframework.web.servlet.view.UrlBasedViewResolver;
 @Configuration
 @EnableWebMvc
 @EnableTransactionManagement
-@ComponentScan("com.spr")
+@ComponentScan("com.prabin.coding.personal")
 @PropertySource("classpath:application.properties")
 @EnableJpaRepositories("com.prabin.coding.personal.repository")
 public class WebAppConfig {

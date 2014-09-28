@@ -18,6 +18,19 @@
 
 	<name>personal</name>
 	<url>http://maven.apache.org</url>
+	<build>
+		<finalName>personal</finalName>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
 	<dependencies>
 		<!-- Apache Commons -->
@@ -114,14 +127,6 @@
 			<artifactId>spring-webmvc-portlet</artifactId>
 		</dependency>
 
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-
-
-
 		<!--Hibernate Validator -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
@@ -140,6 +145,12 @@
 			<artifactId>hibernate-entitymanager</artifactId>
 			<version>${hibernate.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+			<version>1.0.0.GA</version>
+		</dependency>
+
 
 		<!-- spring data jpa -->
 		<dependency>
@@ -175,11 +186,10 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>javax.servlet</groupId>
+			<groupId>jstl</groupId>
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
-
 	</dependencies>
 
 	<dependencyManagement>
