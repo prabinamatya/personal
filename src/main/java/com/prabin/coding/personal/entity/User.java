@@ -1,4 +1,4 @@
-package com.prabin.coding.personal;
+package com.prabin.coding.personal.entity;
 
 import java.io.Serializable;
 import java.util.List;
@@ -6,6 +6,7 @@ import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
@@ -24,18 +25,20 @@ public class User implements Serializable{
 	private static final long serialVersionUID = 1390177847091012107L;
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 	
 	@Size(min = 3, message = "Username must be more than 3 characters!")
-	@Column(unique = true)
+	@Column(name = "username", unique = true, nullable = false)
 	private String name;
 	
 	@Size(min = 3, message = "Invalid email!")
 	@Email(message = "Invalid email!")
+	@Column(name = "email")
 	private String email;
 	
 	@Size(min = 5, message = "Password must be at least 5 characters")
+	@Column(name = "password")
 	private String password;
 	
 	@ManyToMany
