@@ -5,27 +5,14 @@ import static org.junit.Assert.assertEquals;
 import java.util.Arrays;
 import java.util.List;
 
-import javax.transaction.Transactional;
-
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.test.context.transaction.TransactionConfiguration;
-import org.springframework.test.context.web.WebAppConfiguration;
 
-import com.prabin.coding.personal.config.Initializer;
-import com.prabin.coding.personal.config.WebAppConfig;
+import com.prabin.coding.personal.context.BaseEntitiesTest;
 import com.prabin.coding.personal.entity.Role;
 import com.prabin.coding.personal.entity.User;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = { WebAppConfig.class, Initializer.class })
-@Transactional
-@TransactionConfiguration(defaultRollback = true)
-@WebAppConfiguration
-public class RoleRepositoryTest {
+public class RoleRepositoryTest extends BaseEntitiesTest {
 
 	@Autowired
 	private RoleRepository testObject;
