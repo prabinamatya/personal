@@ -45,9 +45,7 @@ public class User implements Serializable {
 	private String password;
 
 	@ManyToMany(cascade = { CascadeType.ALL })
-	@JoinTable (name = "role_appuser",
-					joinColumns={@JoinColumn(name="user_id")},
-					inverseJoinColumns={@JoinColumn(name="role_id")})
+	@JoinTable(name = "role_appuser", joinColumns = { @JoinColumn(name = "user_id") }, inverseJoinColumns = { @JoinColumn(name = "role_id") })
 	private List<Role> roles;
 
 	public String getName() {
