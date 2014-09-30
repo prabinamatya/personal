@@ -14,7 +14,7 @@ import com.prabin.coding.personal.config.WebAppConfig;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = { WebAppConfig.class, Initializer.class })
 @Transactional
-@TransactionConfiguration(defaultRollback = true)
+@TransactionConfiguration(transactionManager = "transactionManager", defaultRollback = true)
 @WebAppConfiguration
 public abstract class BaseEntitiesTest {
 

@@ -14,6 +14,7 @@
 		<hibernate.version>4.3.6.Final</hibernate.version>
 		<mysql.connector.version>5.1.32</mysql.connector.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<apache.tiles>3.0.3</apache.tiles>
 	</properties>
 
 	<name>personal</name>
@@ -167,7 +168,7 @@
 		</dependency>
 
 		<!-- MySQL JDBC connector -->
-		<!-- If you want to use MySQL, uncomment this dependency declation. -->
+		<!-- If you want to use MySQL, uncomment this dependency declaration. -->
 
 		<dependency>
 			<groupId>mysql</groupId>
@@ -202,6 +203,51 @@
 			<artifactId>javax.el</artifactId>
 			<version>2.2.4</version>
 		</dependency>
+
+		<!-- Spring Security -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-taglibs</artifactId>
+			<version>${spring.security.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>${spring.security.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>${spring.security.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.0.1</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>javax.servlet.jsp-api</artifactId>
+			<version>2.2.1</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.tiles</groupId>
+			<artifactId>tiles-core</artifactId>
+			<version>${apache.tiles}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.tiles</groupId>
+			<artifactId>tiles-jsp</artifactId>
+			<version>${apache.tiles}</version>
+		</dependency>
+
 
 	</dependencies>
 
