@@ -29,6 +29,7 @@ import org.springframework.web.servlet.view.UrlBasedViewResolver;
 @ComponentScan(basePackages = "com.prabin.coding.personal")
 @PropertySource("classpath:application.properties")
 @EnableJpaRepositories(basePackages = "com.prabin.coding.personal.repository")
+// @ImportResource("classpath*:/security.xml")
 public class WebAppConfig {
 
 	private static final Logger logger = LoggerFactory

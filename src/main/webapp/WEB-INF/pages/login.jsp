@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 
 <%@ include file="../layout/taglib.jsp" %>
+    <link rel="stylesheet" href="/static/css/styles.css" type="text/css"/>
 
 <style>
 
